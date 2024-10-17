@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+
+	.wrapper>.title{
+		text-align : left;
+	}
+	.wrapper>header{
+	
+	
+	}
+	.wrapper>header>.msg{
+		height : 25px;
+		font-size : 0.5rem;
+		color : red;
+	}
+	.wrapper>header>.top--header{
+		/* border : 1px solid gray; */
+		height : 30px;
+		line-height : 30px;
+		padding : 0 5px;
+		display:flex;
+		justify-content : right;	
+	}
+	.wrapper>header>.top--header>*{
+		display:block;
+		width : 100px;
+		height : 30px;
+		display : relative;
+		text-align:right;
+		height : 30px;
+		font-size : 0.8rem;
+	}
+
+	
+	.wrapper>nav{}
+	
+	.wrapper>main{}
+	.wrapper>main>.search{
+
+	}
+	.wrapper>main>.search>.search_block
+	{
+		display : flex;
+		justify-content : right;
+		align-item : center;
+		
+	}
+	.wrapper>main>.search>.search_block>*{
+		margin : 5px;
+	}
+	.wrapper>main>.search>.search_block>*:nth-child(1){
+	 	width : 100px;
+	}
+	.wrapper>main>.search>.search_block>*:nth-child(2){
+		 width : 200px;
+	}
+	.wrapper>main>.search>.search_block>*:nth-child(3){
+		width : 80px;
+	}
+	
+	.wrapper>main>.search>.show_block{
+		 
+		height : 520px;
+		border : 1px solid lightgray;
+		margin : 10px 0px;
+		padding : 15px;
+		
+	
+	}
+	.wrapper>main>.search>.show_block>*{
+		margin : 5px 0px;
+	}
+	.wrapper>main>.search>.show_block>.header{
+		
+	}
+	.wrapper>main>.search>.show_block>.body{
+		height : 400px;
+		border : 1px solid gray;
+		padding : 5px;
+	}
+	.wrapper>main>.search>.show_block>.body table{}
+	.wrapper>main>.search>.show_block>.body td{
+		height : 17px;
+		line-height : 17px;
+		border : 1px dashed lightgray;
+		margin : 2px 0px;
+	}
+
+	.wrapper>main>.search>.show_block>.footer{
+		height : 50px;
+		line-height : 50px;
+		/* border : 1px solid gray; */
+			
+		display:flex;
+		justify-content : space-between;
+	}
+	.wrapper>main>.search>.show_block>.footer>.left{
+		height : 50px;
+		font-size : 1.25rem;
+		display:flex;
+	}
+	.wrapper>main>.search>.show_block>.footer>.left>*{
+		display:block;
+		width :35px;
+		height : 35px;
+		line-height:35px;
+		text-align:center;
+		border-radius : 3px;
+		margin-left : 3px;
+		background-color:royalblue;
+		color : white;
+		opacity:0.8;
+		 
+	}
+	.wrapper>main>.search>.show_block>.footer>.left>*:hover{
+		opacity:1;
+	}
+	.wrapper>main>.search>.show_block>.footer .pagination a{
+		height : 35px !important;
+		line-height : 35px !important;
+		padding  : 0px 15px !important;
+	}
+	.wrapper>main>.search>.show_block>.footer>.right{
+		height : 35px;
+		line-height : 35px;
+	}

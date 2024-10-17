@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+	.wrapper{}
+	.show_block{
+		display:flex;
+		justify-content : center;
+		align-items : center;
+		margin : 100px auto;	
+		position:relative;
+	}
+	.show_block::before{
+		content:'유저별 접속 현황';
+		position:absolute;
+		top:-40px;
+		font-size:1.8rem;
+		font-weight : 800;
+		
+	}
+	.show_block>*{
+		margin : 50px;
+		width : 400px;	 
+		position:relative;
+	}
+	.show_block>*::before{	
+		position:absolute;
+		top:-20px;
+		left : 240px;
+	}
+	.wrapper>header>.top--header{
+		/* border : 1px solid gray; */
+		height :58px;	 
+		line-height : 30px;
+		padding : 0 5px;
+		 
+		 	
+	}
+	.wrapper>header>.top--header>*{
+		display:block;
+		width : 100px;
+		height : 30px;
+		display : relative;
+		text-align:right;
+		height : 30px;
+		font-size : 0.8rem;
+	}
+	
+	
+	.top--header div:nth-child(1){
+		position:relative;
+		width : 500px;
+	 
+		
+	}
+	.top--header div:nth-child(2){
+		position:relative;
+		
+	}
+	.wrapper>.show_block>.c_total{}
+	.wrapper>.show_block>.c_user{}
+	.wrapper>.show_block>.c_admin{}

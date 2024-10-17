@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' -25,
+  'opsz' 48;
+  font-size:2rem;
+}
+
+.top--header{
+	height :58px;	 
+	display:flex;
+	justify-content: right;
+	align-items: end;
+	position:relative;	
+}
+.top--header div{
+	display:flex;
+	align-items: end;
+	position:absolute;
+	top:35px;
+	z-index:3;
+	height : 25px;
+	
+}
+.top--header a{
+	display:block;	
+}
+
+
+.alarm_block{
+	
+	width:50px;height:50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+	position:relative;
+}
+.alarm_block .dotted_bg{
+	width:15px;height:15px;
+	background-color:red;
+	border-radius:50%;
+	position:absolute;
+	left:22px;
+	top:12px;
+	
+	font-size:0.7rem;
+	color:white;
+	font-weight:700;
+	text-align:center;
+	line-height:15px;
+}
+
+.mylendList>.body {
+	width :800px;height : 400px;overflow:auto;
+}
+
+
+.hide{
+	display : none;
+}
+
+
+
+
+main>section{
+	position:relative;
+}
+main>section:first-child .alarm_block{
+				position:absolute;
+				left:0px;
+				top:-120px;
+				z-index:5
+}
+main>section:nth-child(2) {
+				 
+				height : 500px;
+				margin-top : 20px;
+}
+
+.second_section>*{
+	margin-top:10px;
+}
+				
+				

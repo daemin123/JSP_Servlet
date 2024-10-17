@@ -1,0 +1,87 @@
+//-------------------------------
+//[DAO] Connection Pool 설정
+//-------------------------------
+- protected static Connection conn; 
+- ConnectionPool()생성자에 if로직 추가
+
+//--------------------------------------------------------------
+//로그인한 계정별 페이지 만들기
+//--------------------------------------------------------------
+
+//-------------------------------
+//[Controller] MemberPageController
+// 사서/유저 페이지 포워딩
+//-------------------------------
+- Controller>member>MemberPageController.java 생성
+- implements SubController
+- Session으로 부터 ROLE 꺼내기
+- ROLE에 따라 페이지 user.jsp , member.jsp 로 포워딩
+
+//-------------------------------
+//[Controller] FrontController 에 uri 등록
+//-------------------------------
+- init 함수에  /mypage.do 등록
+
+
+//-------------------------------
+//[View] user.jsp , member.jsp
+//-------------------------------
+- /WEB-INF/view/member/user.jsp
+- /WEB-INF/view/member/member.jsp
+- 구분되는 기본코드 넣기
+
+//-------------------------------
+//[View] main.jsp 에 페이지 링크 추가
+//-------------------------------
+--추가
+<c:if test="${not empty ROLE}">
+	<a href=<c:url value="/mypage.do" /> >나의메뉴로 이동</a></br>
+</c:if>
+
+//--------------------------------------------------------------
+//사서계정에 도서 대여 등록 기능 구현하기
+//--------------------------------------------------------------
+//-------------------------------
+//member.jsp 기본 HTML/JS 코드 
+//-------------------------------
+- HTML 코드 구현
+- aixos 비동기 요청 구현
+- 확인
+//-------------------------------
+//[Controller] LendAddController
+//-------------------------------
+- 1 파라미터
+- 2 입력값 검증
+- 3 서비스 실행
+- service.reqLend(req) 로 변경
+
+//-------------------------------
+//[Service] LendService Interface
+//-------------------------------
+- boolean reqLend(HttpServletRequest req) 로 변경
+- 
+//-------------------------------
+//[Service] LendServiceImple
+//-------------------------------
+- boolean reqLend(HttpServletRequest req) 로 변경
+- request객체로 부터 id 꺼내오기
+- request객체로 부터 bookcode 꺼내오기
+- Session객체로 부터 ROLE 꺼내오기
+
+//-------------------------------
+//[Controller] LendAddController
+//-------------------------------
+4 View로 전달
+- PrintWriter out = resp.getWriter();
+- ieLend 결과에 따른 메시지 전달 
+
+//-------------------------------
+//member.jsp에서 서버 전달 msg 표시하기
+//-------------------------------
+- .then 이하 코드 완성하기
+
+
+
+
+
+

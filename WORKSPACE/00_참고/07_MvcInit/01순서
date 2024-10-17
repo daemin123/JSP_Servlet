@@ -1,0 +1,36 @@
+기본프로젝트 Github Push
+
+//------------------------
+//00 Project Setting
+//------------------------
+
+00 프로젝트 생성
+- Dynamic Web Project
+- Tomcat Server 생성 - Port설정
+- web.xml 만들기
+	- FrontController 설정
+	- Filter 설정
+	
+- context.xml 만들기
+	- Resource 설정하기
+- Emmet 설치/설정(https://parkjye.tistory.com/53)
+- Tern 설치/설정(JAVASCRIPT 자동완성)
+	- (https://xianeml.tistory.com/67)
+	- or https://velog.io/@ino5/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-tern-%EC%84%A4%EC%B9%98
+	
+
+
+
+00 JAVA 파일 Copy
+- 한글문자 깨짐 해결  : 프로젝트 우클릭 -> Properties -> Resource -> Text File Encoding 칸의 Other 탭에 UTF8선택 저장 나가기
+
+
+
+
+
+
+
+
+
+
+ 

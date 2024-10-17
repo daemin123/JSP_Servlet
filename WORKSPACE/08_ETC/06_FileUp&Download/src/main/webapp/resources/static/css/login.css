@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+	.wrapper{
+		width : 350px;
+		height : 350px;
+		position:fixed;
+		top:-300px;left:0;right:0;bottom:0;
+		margin:auto;
+		/* border : 1px solid gray; */
+		text-align:center;
+		padding : 10px;
+	}
+	.wrapper>.msg{
+		height :10px;
+		font-size : 0.5rem;
+		color :red;
+	}
+	.wrapper>*{
+		margin-bottom :10px;
+	}
+	.wrapper>*:first-child{
+		margin-bottom : 50px;
+	}

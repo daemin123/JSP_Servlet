@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+.main-block{
+	
+}
+
+.main-block>.left{
+	
+	height : 600px;
+	padding : 10px;
+.main-block>.left>div{
+}
+	
+	
+}
+.main-block>.left>div>ul{
+	border : 1px solid;
+	padding : 5px;
+}
+.main-block>.left>div>ul>li{
+	border : 1px solid;
+	margin : 5px;
+	height : 35px;
+	line-height : 35px;
+	
+	text-align:center;
+	
+}
+.main-block>.left>div>ul>li>a{
+	display:block;
+}
+
+
+
+.main-block>.right{
+	height : 600px;
+	border : 1px solid;
+	padding : 10px;
+		
+}
+
+.main-block>.right>.body{
+	
+}

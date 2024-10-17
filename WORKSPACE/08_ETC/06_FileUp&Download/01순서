@@ -1,0 +1,98 @@
+기본프로젝트 Github Push
+
+//------------------------
+//00 Project Setting
+//------------------------
+
+0 프로젝트 생성
+- Dynamic Web Project
+- Tomcat Server 생성 - Port설정
+- web.xml 만들기
+- Emmet 설치/설정
+- Tune 설치/설정
+
+0 JAVA 파일 Copy
+- 한글문자 깨짐 해결  : 프로젝트 우클릭 -> Properties -> Resource -> Text File Encoding 칸의 Other 탭에 UTF8선택 저장 나가기
+
+
+//------------------------
+//01 Login 
+//------------------------
+
+1 FrontController 설정
+- Servlet 만들기(extends HttpServlet, web.xml에 서블릿 등록)
+- init(ServletConfig config) 함수 Overriding 
+- FrontController의 생성자 삭제
+- execute -> service 함수로 변경(SubController Interface 변경)
+- 
+
+2 각 SubController의 if블럭마다 CRUD 나누기
+- 하위 패키지 book,lend,memeber 만들기
+- if블럭에 따라 CRUD 컨트롤러 나누기
+- ex)
+- BookSearchController
+- BookInsertController
+- BookUpdateController
+- BookDeleteController
+- implements SubController 추가해서 void execute(HttpServletRequest req, HttpServletResponse resp) 받기
+
+3 MainController 추가
+- MainController 생성 implements SubController 
+- FrontController에 /main.do 등록
+- web.xml 에 welcome File 에 추가
+- /WEB-INF/view/main.jsp Frontend Code 추가
+
+4 로그인
+- LoginController 기본코드
+-- 1 파라미터
+-- 2 입력값검증
+-- 3 서비스실행
+-- 4 View이동 
+
+- LoginService's login(HttpServletRequest req) 형태로 변경
+- sid받는 작업을 session에 저장하는 형태로 변경(ID/ROLE)
+- LoginService's login함수의 리턴결과를 LoginController받고
+  true/false 에 따라 viwe 이동 
+- 예외메시지 처리를 request.setAttribute("msg","메시지")
+- /WEB-INF/view/member/auth/login.jsp 에서
+  EL/JSTL방식으로 Session/request객체의 Attribute값 확인
+  
+5 로그아웃
+- FrontController init 함수 /logout.do 에대한 LogoutController등록
+- LogoutController 에서 Session초기화 Redirect처리
+
+
+//------------------------
+//02 도서조회하기(비회원 조회가능)
+//------------------------
+6 axios 설정
+- /WEB-INF/view/main.jsp HTML 코드 구현
+- /WEB-INF/view/main.jsp Script 코드 구현
+- /WEB-INF/view/main.jsp Btn 이벤트 코드 구현
+- /WEB-INF/view/main.jsp Btn 클릭시 비동기 요청 
+-- axios Cdn 연결이후 get요청
+-- 파라미터 없이 요청 전체 도서 요청하기
+-- [참고] Project명에 _ 를 없애줍니다
+
+7 BookSearchController 설정
+
+- BookSearchController기본코드(1 파라미터,2유효성체크,3서비스실행,4 View이동)
+- BookSearchController 받는 List<BookDto>list 를 JSON타입으로 변경
+-- jackson-databind.jar 를 lib에 추가
+-- BookSearchController에서 JAVA->JSON으로 바꾸는 코드 추가
+- BookSearchController response로부터 PrintWriter 꺼내기
+- BookSearchController 바뀐 JSON값을 PrintWriter로 전달
+
+8 BookService&BookServiceImpl
+- BookService Interface 의 파라미터 getAllBook(HttpServletRequest req) 변경
+- BookServiceImpl 의 파라미터 getAllBook(HttpServletRequest req) 변경
+
+
+
+
+
+
+
+
+
+ 

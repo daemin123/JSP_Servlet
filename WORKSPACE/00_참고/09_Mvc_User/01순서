@@ -1,0 +1,68 @@
+기본프로젝트 Github Push
+
+//------------------------
+//회원가입 만들기
+//------------------------
+- nav
+	-로그인 (/user/add/)
+	
+
+//------------------------
+//로그인
+//------------------------
+- login
+	-
+	-
+	-
+
+//------------------------
+//로그아웃
+//------------------------
+- logout
+	-
+	-
+	-
+	
+//------------------------
+//로그인여부에 따라 숨기기
+//------------------------
+- top header
+	
+- nav
+
+- book>read.jsp>대여신청
+
+//------------------------
+//권한처리(필터)
+//------------------------
+ok
+
+//------------------------
+//Session 재가공하기
+//------------------------
+- session 테이블의 id를 varchar(255)로 변경
+- sesionDto 의 sessionId 자료형 변경
+- sesionDaoImpl 의 sessionId 자료형 변경
+- UserServiceImpl 의 sessionId 자료형 변경
+
+- sessionid를 UUID로 암호화 해서 쿠키로 전달(userServiceImpl's login시)
+
+//------------------------
+//Remember ME 구현(로그인 상태를 유지)
+//------------------------
+-  UserServiceImpl의 login 의 파라미터에 HttpServletResponse response 추가 후 sessionId 쿠키 전달
+-  UserServiceImpl의 login 의 파라미터에 HttpServletResponse response 추가 후 sessionId 쿠키 삭제
+
+
+- 전역필터 설정
+	- 만약 HttpSession안에 sessionDto가 있으면 통과
+	- 만약 HttpSession안에 sessionDto가 없으면 sessionid쿠키를 사용하여 session테이블에 동일 내용이있는지 확인
+		- 동일 내용있으면 HttpSession 에 sessionDto 생성 해서 넣기
+		- 동일 내용없으면 그냥 넘기기(익명로그인)
+	 
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+main{
+
+}
+.search-block{
+	width : 100%;
+	display:flex;
+	justify-content: right;
+	position:absolute;
+	right:0;
+	top:0;	
+}
+
+.search-block>form{
+	display:flex;
+	justify-content: right;
+	align-items : center;
+}
+
+
+
+

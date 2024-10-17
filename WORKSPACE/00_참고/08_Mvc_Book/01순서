@@ -1,0 +1,80 @@
+기본프로젝트 Github Push
+
+//------------------------
+//lib추가
+//------------------------
+- jstl
+
+//------------------------
+//Template 만들기
+//------------------------
+
+- resources>static>jsp 
+	- link
+	- nav
+	- header
+	- footer
+
+- index.jsp 를 각 semetic별로 나눠 jsp 에 담아서 link
+
+- template.jsp 만들기
+	
+	
+ 
+//------------------------
+// BookDto , BookService 옮기기
+//------------------------
+- bookDB
+	- book
+	- session
+	- user
+
+- book data 넣기
+	- sample.csv 에 있는거 옮기기
+	
+- bookController
+	- bookAddController
+	- book
+	- bookAddController
+	- bookAddController
+- bookServiceImpl
+- bookService
+- bookDao
+- bookDto
+- bookList
+
+
+
+//------------------------
+// bookAdd
+//------------------------
+	- view Page 단순만들기
+	- Controller 
+	- Service
+	- Dao
+	- Dto
+
+
+//------------------------
+// bookList
+//------------------------
+- 기본
+	- view Page 단순만들기
+	- Controller 
+	- Service
+	- Dao
+	- Dto
+
+- 키워드 조회(type, keyword)
+
+
+//------------------------
+// bookRead
+//------------------------
+
+
+
+
+
+
+		
